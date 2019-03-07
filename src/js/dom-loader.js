@@ -1,0 +1,1 @@
+export var para = document.getElementById('paragraf');
