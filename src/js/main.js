@@ -2,7 +2,7 @@ import { para } from './dom-loader';
 
 para.innerHTML = 'radi l ovo mic cddesck';
 
-var url = 'https://jsonplaceholder.typicode.com/users' 
+var url = '/src/json/people.json' 
 
 
 fetch(url)
@@ -11,7 +11,7 @@ fetch(url)
     return result.json();
   })
   .then(data => {
-    console.log(data.users[0].name)
+    console.log(data.users)
   })
   .catch(error => console.log(error))
 
