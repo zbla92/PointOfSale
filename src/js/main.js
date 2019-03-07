@@ -1,29 +1,26 @@
-import { para } from './dom-loader';
+import { para } from "./dom-loader";
 
-para.innerHTML = 'radi l ovo mic cddesck';
+para.innerHTML = "maca test";
 
-var urlEMPs = '/src/json/people.json' 
-var urlItems = '/src/json/items/items.json'
-
+var urlEMPs = "/src/json/people.json";
+var urlItems = "/src/json/items/items.json";
 
 fetch(urlEMPs)
   .then(result => {
-    console.log(result)
+    console.log(result);
     return result.json();
   })
   .then(data => {
-    console.log(data.users)
+    console.log(data.users);
   })
-  .catch(error => console.log(error))
+  .catch(error => console.log(error));
 
-
-
-  fetch(urlItems)
+fetch(urlItems)
   .then(result => {
-    console.log(result)
+    console.log(result);
     return result.json();
   })
   .then(data => {
-    console.log(data)
+    console.log(data);
   })
-  .catch(error => console.log(error))
+  .catch(error => console.log(error));
