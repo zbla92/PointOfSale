@@ -3,7 +3,7 @@ body{
   font-family: 'Montserrat', sans-serif;
   }
   .container-login{
-    margin-top: 200px!important;
+    margin-top: 50px!important;
     width: 380px;
     margin: 0 auto;
   }
@@ -23,15 +23,14 @@ body{
     font-size: 80%
     
   }
-
+  
   .btn-login{
     padding-top: 19px;
     min-width: 116px;
     min-height: 116px;
     margin: 0 auto;
     background-color: rgba(255, 255, 255, 0.404);
-    border-radius: 7px;
-    border: none;
+    
     font-family: 'Montserrat', sans-serif;
     font-size: 350%;
     color: azure;
@@ -39,6 +38,14 @@ body{
     text-align: center;
   }
   .btn-login:active{
-    background-color: rgba(212, 212, 212, 0.404);
+    background-color: rgba(180, 179, 179, 0.404);
     outline:none;
+    color: rgb(230, 230, 230);
+  }
+
+  .logo{
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    padding-bottom: 50px;
   }

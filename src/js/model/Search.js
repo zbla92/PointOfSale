@@ -1,9 +1,8 @@
 export default class Search {
-    constructor (emp) {
-        this.emp = {a: 3, b: 5};
-        this.emb = 0;
+    constructor () {
+        
     }
-        async getEmpList(id){
+        async getEmpList(){
             try {
                 const res = await fetch("../src/data/emps/people.json");
                 this.data = await res.json();

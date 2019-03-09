@@ -1,28 +1,28 @@
 import  Search  from "../js/model/Search";
-
+import Logging   from "../js/model/Loging"
 
 const state = {};
 window.state = state;
 
-
-
- 
-
-
-console.log(state.employee)
-
+//----------------------------CONTROL SEARCH:
 const controlSearch = async () => {
-const id = 1;
 
 
-      // 2) New search object and add to state
-     state.employee = new Search(id);
+      //Call modules to create new objects 
+     state.employee = new Search();
+     state.logging = new Logging();
 
-     await state.employee.getEmpList(id);
-     const b = state.employee;
-     console.log(b.data.emp[1])
-      // 3) Prepare UI for results
+     await state.employee.getEmpList();
+    console.log(state.employee.data.emp[0].id);
+    console.log(state.employee.data.emp.length)
+      for(var i = 0; i <state.employee.data.emp.length; i++){
+        state.employee.data.emp[i].id
+      }
+     
+      // 2) Prepare UI for results
       
       
   }
-controlSearch()
+controlSearch();
+
+
