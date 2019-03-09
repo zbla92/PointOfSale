@@ -20,7 +20,7 @@ const id = 1;
 
      await state.employee.getEmpList(id);
      const b = state.employee;
-     console.log(b.data.emp[0])
+     console.log(b.data.emp[1])
       // 3) Prepare UI for results
       
       
