@@ -1,38 +1,28 @@
-import { para } from './dom-loader';
-
-para.innerHTML = 'radi l ovo mic cddesck';
-
-var urlEMPs = '/src/json/people.json' 
-var urlItems = '/src/json/items/items.json'
+import  Search  from "../js/model/Search";
 
 
-fetch(urlEMPs)
-  .then(result => {
-    console.log(result)
-    return result.json();
-  })
-  .then(data => {
-    console.log(data.users)
-  })
-  .catch(error => console.log(error))
+const state = {};
+window.state = state;
 
 
 
-  fetch(urlItems)
-  .then(result => {
-    console.log(result)
-    return result.json();
-  })
-  .then(data => {
-    console.log(data)
-  })
-  .catch(error => console.log(error))
+ 
 
-  async function getItems(){
-    const result = await fetch(urlItems);
-    const data = await result.json();
-    return data;
+
+console.log(state.employee)
+
+const controlSearch = async () => {
+const id = 1;
+
+
+      // 2) New search object and add to state
+     state.employee = new Search(id);
+
+     await state.employee.getEmpList(id);
+     const b = state.employee;
+     console.log(b.data.emp[0])
+      // 3) Prepare UI for results
+      
+      
   }
-
-  var rez = getItems();
-  console.log(rez)
+controlSearch()
