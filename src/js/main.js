@@ -27,3 +27,12 @@ fetch(urlEMPs)
     console.log(data)
   })
   .catch(error => console.log(error))
+
+  async function getItems(){
+    const result = await fetch(urlItems);
+    const data = await result.json();
+    return data;
+  }
+
+  var rez = getItems();
+  console.log(rez)
